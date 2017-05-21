@@ -8,7 +8,7 @@ class Rpn
   def solve
     result = 0
     @calculation.split(" ").each do |element|
-      to_push = is_number?(element) ? element.to_i : calculate(element)
+      to_push = is_number?(element) ? element.to_f : calculate(element)
       @stack << to_push
     end
 

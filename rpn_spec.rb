@@ -55,4 +55,14 @@ class TestRPN < MiniTest::Test
     @rpn.calculation = "10 4 - 2 /"
     assert_equal(3, @rpn.solve)
   end
+
+  def test_float_addition
+    @rpn.calculation = "2.5 2.5 +"
+    assert_equal(5, @rpn.solve)
+  end
+
+  def test_float_subtraction
+    @rpn.calculation = "5 2.5 -"
+    assert_equal(2.5, @rpn.solve)
+  end
 end
